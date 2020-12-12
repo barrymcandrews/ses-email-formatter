@@ -17,7 +17,9 @@
     "inlineSources": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
-    "typeRoots": ["./node_modules/@types"]
+    "typeRoots": ["./node_modules/@types"],
+    "jsx": "react",
+    "esModuleInterop": true
   },
   "exclude": ["cdk.out"]
 }
