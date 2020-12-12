@@ -12,7 +12,7 @@ const ses = new SES({
 });
 
 async function sendEmail(message: SNSMessage) {
-  const body = renderToStaticMarkup(Template({message}));
+  const body = renderToStaticMarkup(await Template({message}));
   console.log(`Body:\n${body}\n`);
   const params: SendEmailRequest = {
     Destination: {
