@@ -6,7 +6,7 @@ Amazon Simple Email Service (SES) can be configured to send notifications when e
   <img src="docs/email.png">
 </p>
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+This is an AWS CDK application. To build/deploy this project use the CDK CLI.
 
 ## Useful commands
 
