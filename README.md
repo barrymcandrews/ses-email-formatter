@@ -1,6 +1,10 @@
-# Welcome to your CDK TypeScript project!
+# SES Email Formatter
 
-This is a blank project for TypeScript development with CDK.
+Amazon Simple Email Service (SES) can be configured to send notifications when emails are sent to particular addresses. Unfortunately, these notifications are extremely difficult to read. Typically, the notification is a large blob of JSON. This project creates a lambda function that formats that JSON blob as a human-readable email. This formatted email summarizes all the important information, and provides a download link to the notification recipient. 
+
+<p align="center">
+  <img src="docs/email.png">
+</p>
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
