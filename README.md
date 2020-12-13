@@ -11,9 +11,10 @@ Amazon Simple Email Service (SES) can be configured to send notifications when e
 <p align="center">
   <img src="docs/architecture.svg">
 </p>
+
 SES handles all incoming emails for a particular domain name. When SES recieves an email, it saves the email to an S3 bucket and publishes a message to an SNS topic. The email formatter lambda function is subscribed to this SNS topic. Once the lambda function is triggered, it downloads the email from S3 and uses it to generate a human readable email. The lambda function sends this email to the notification recipient.
 
-**This repository only contains the infrastructure-as-code (IaC) for the formatter lambda function.**
+**This repository only contains the code for the formatter lambda function.**
 
 
 ## Useful commands
