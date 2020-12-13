@@ -18,7 +18,7 @@ SES handles all incoming emails for a particular domain name. When SES recieves 
 
 ## Useful commands
 
-This application uses the AWS CDK to generate the lambda function.
+This application uses the AWS CDK to generate the lambda function. To build/deploy this project use the CDK CLI.
 
  * `npm run build`   compile typescript to js
  * `npm run watch`   watch for changes and compile
