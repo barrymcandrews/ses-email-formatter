@@ -9,7 +9,7 @@ const s3 = new S3()
 export default async function Template({message}: {message: SNSMessage}) {
   let sesMessage = JSON.parse(message.Message) as SESMessage;
 
-  const destination = sesMessage.mail.destination.reduce((a, b) => `${a}, ${b}`);
+  const destination = sesMessage.mail.destination.join();
 
   const s3Action = sesMessage.receipt.action as SESReceiptS3Action
   const s3Path = `s3://${s3Action.bucketName}/${s3Action.objectKey}`;
@@ -26,7 +26,7 @@ export default async function Template({message}: {message: SNSMessage}) {
 
   return (
     <>
-      <p>Hi, Barry</p>
+      <p>Hi Barry,</p>
       <p>An email was just sent to your website! Here are the details:</p>
       <p><b>To:</b> {destination}</p>
       <p><b>From:</b> {sesMessage.mail.source}</p>
